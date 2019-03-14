@@ -1,3 +1,67 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
 body {
     background-color: lightskyblue;
+    width: 90%;
 }
+
+.page-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.buttons > button {
+    border-radius: 15%;
+    width: 50px;
+    height: 25px;
+}
+
+#pet-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    align-content: center;
+}
+
+.card {
+    padding: 5px;
+    border: 2px solid grey;
+    margin: 2px;
+    width: 27%;
+    justify-content: center;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.cat, #cat {
+    background-color: red;
+}
+
+.dog, #dog {
+    background-color: yellow;
+}
+
+.dino, #dino {
+    background-color: green;
+}
+
+.all, #all {
+    background-color: purple;
+}
+

@@ -1,3 +1,8 @@
+const printToDom = (divId, textToPrint) => {
+  const selectedDiv = document.getElementById(divId);
+  selectedDiv.innerHTML = textToPrint;
+};
+
 const pets = [
     {
       name: "Dusty",
@@ -210,3 +215,60 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+  const cardCreator = (pets) => {
+    let domString = ``;
+    pets.forEach((pet) => {
+      domString += `<div class="card">`;
+      domString += `<h3>${pet.name}</h3>`;
+      domString += `<img src=${pet.imageUrl} alt="${pet.name} who is a ${pet.type}">`;
+      domString += `<h5>${pet.color}</h5>`;
+      domString += `<p>${pet.specialSkill}</p>`;
+      domString += `<div class = `;
+      if (pet.type === 'cat') {
+        domString += `"cat">`;
+      } 
+      else if (pet.type === 'dog') {
+        domString += `"dog">`;
+      }
+      else if (pet.type === 'dino') {
+        domString += `"dino">`;
+      }
+      else {
+        domString +=`"all">`;
+      }
+      domString += `<h5>${pet.type}</h5></div>`;
+      domString += `</div>`;
+    })
+    printToDom('pet-cards', domString);
+  };
+
+  const buttonClick = (e) => {
+    const buttonId = e.target.id;
+    const selectedPets = [];
+    pets.forEach((pet) => {
+      if (pet.type === buttonId) {
+        selectedPets.push(pet);
+      }
+    });
+
+    if (buttonId === 'all') {
+      cardCreator(pets);
+    } else {
+      cardCreator(selectedPets);
+    }
+  };
+
+  const buttonEvents = () => {
+    document.getElementById(`cat`).addEventListener('click', buttonClick);
+    document.getElementById(`dog`).addEventListener('click', buttonClick);
+    document.getElementById(`dino`).addEventListener('click', buttonClick);
+    document.getElementById(`all`).addEventListener('click', buttonClick);
+  };
+
+  const init = () => {
+    buttonEvents();
+    cardCreator(pets);
+  };
+
+  init();

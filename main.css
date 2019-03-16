@@ -1,17 +1,23 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
+    margin: 0 auto;
 }
 
 body {
-    background-color: lightskyblue;
+    background-color: #f0f5f5;
     width: 90%;
 }
 
 .page-title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
     margin: 0 auto;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#page-name {
+    font-family: 'Bangers', cursive;
 }
 
 .buttons {
@@ -19,12 +25,15 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .buttons > button {
     border-radius: 15%;
-    width: 50px;
+    width: 60px;
     height: 25px;
+    font-size: 1em;
 }
 
 #pet-cards {
@@ -36,13 +45,34 @@ body {
 }
 
 .card {
-    padding: 5px;
-    border: 2px solid grey;
-    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid black;
+    margin: 0 0 5px 0;
     width: 27%;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
 }
+    .card h3 {
+        background-color: lightgrey;
+        padding: 5px 0 5px 0;
+        width: 100%;
+    }
+
+    .card p {
+        height: 30%;
+        justify-content: space-around;
+    }
+
+    .card h5 {
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .card img {
+        margin-top: 5px;
+    }
 
 img {
     width: 200px;
@@ -50,18 +80,25 @@ img {
 }
 
 .cat, #cat {
-    background-color: red;
+    background-color: lightskyblue;
 }
 
 .dog, #dog {
-    background-color: yellow;
+    background-color: lightyellow;
 }
 
 .dino, #dino {
-    background-color: green;
+    background-color: lavender;
 }
 
 .all, #all {
-    background-color: purple;
+    background-color: lightseagreen;
+}
+
+
+.cat, .dog, .dino, .all {
+    width: 100%;
+    padding: 5px 0 5px 0;
+    vertical-align: baseline;
 }
 

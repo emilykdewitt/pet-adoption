@@ -10,7 +10,7 @@ A pet finder application.
 
 Users can browse available pet listings, using buttons at the top of the page to filter by the type of pet they are searching for (cat, dog, dino, or all).
 
-![Screenshot of Pet Page]()
+![Screenshot of Pet Page](https://raw.githubusercontent.com/emilykdewitt/pet-adoption/readmeedits/screenshot.png)
 
 ### How to Run
 
